@@ -9,6 +9,7 @@ const AdminView = ({ moviesData, fetchData }) => {
     const { user } = useContext(UserContext);
     const [movies, setMovies] = useState([]);
     const [showAddMovie, setShowAddMovie] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (Array.isArray(moviesData) && moviesData.length > 0) {
@@ -31,6 +32,7 @@ const AdminView = ({ moviesData, fetchData }) => {
         } else {
             setMovies([]);
         }
+        setLoading(false);
     }, [moviesData]);
 
     return (
