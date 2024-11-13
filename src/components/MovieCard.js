@@ -10,17 +10,19 @@ export default function MovieCard({movieProp}) {
         <Card className="d-flex flex-column h-100">
             <Card.Body className="d-flex flex-column">
                 <div className="mt-3 text-center">
-                    <Card.Title className="text-primary">{title.toUpperCase()}</Card.Title>
+                    <Card.Title className="text-primary">{title}</Card.Title>
                 </div>
-                <div className="mt-5 mb-5 flex-grow-1 d-flex align-items-center justify-content-center">
-                    <Card.Text>{director}</Card.Text>
-                    <Card.Text>{year}</Card.Text>
-                    <Card.Text>{description}</Card.Text>
+                <div className="mt-3 text-center">
+                    <Card.Text>Director:<br />{director}</Card.Text>
+                    <Card.Text>Year:<br />{year}</Card.Text>
+                    <Card.Text>Description:<br />{description}</Card.Text>
                 </div>
+
+
             </Card.Body>
             <Card.Footer>
                 <div className="mt-2">
-                    <Link className="btn btn-primary w-100" to={`/movies/getMovie/${_id}`}>
+                    <Link className="btn btn-primary w-100" to={`/movies/${_id}`}>
                         Details
                     </Link>
                 </div>

@@ -16,13 +16,13 @@ const UserView = ({ moviesData }) => {
             ));
             setMovies(moviesArr);
         } else {
-            setMovies([]);  // Clear movies if data is empty or not an array
+            setMovies([]);
         }
     }, [moviesData]);
 
     return (
         <Row>
-            {movies.length > 0 ? movies : <div>No movies available</div>}  {/* Fallback for empty data */}
+            {movies}
         </Row>
     );
 };

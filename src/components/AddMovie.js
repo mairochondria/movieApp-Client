@@ -43,7 +43,7 @@ export default function AddMovie({show, onHide, fetchData }) {
             res.json())
         .then(data => {
             console.log(data);
-            if(data.success === true) {
+            if(data) {
                 notyf.success('Successfully Added');
                 onHide();
                 fetchData();

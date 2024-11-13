@@ -15,7 +15,7 @@ export default function Movie() {
         })
         .then(res => res.json())
         .then(data => {
-            setMovies(data)
+            setMovies(data.movies)
         })
     }
 
